@@ -84,8 +84,8 @@ function SliderField(props: SliderFieldProps) {
         display="flex"
         alignItems={{ xs: 'start', sm: 'center' }}
         flexDirection={{ xs: 'column', sm: 'row' }}
-        columnGap={1}>
-        <Stack sx={{ ...sliderSx }}>
+        gap={1}>
+        <Stack sx={{ ...sliderSx, width: '100%', flexGrow: 1 }}>
           <SliderDisplayValue value={value} hasLabels={hasLabels} isInteracted={isInteracted} />
           {hasLabels ? <SliderLabels minLabel={minLabel} maxLabel={maxLabel} /> : null}
           <StandardSlider
